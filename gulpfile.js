@@ -4,6 +4,9 @@ const tildeImporter = require('node-sass-tilde-importer');
 const del = require('del');
 const sourcemaps = require('gulp-sourcemaps');
 const concat = require('gulp-concat');
+const lec = require('gulp-line-ending-corrector');
+const isBinary = require('gulp-is-binary');
+const through = require('through2'); // transform the stream
 
 // HTML
 const htmlReplace = require('gulp-html-replace');
@@ -59,8 +62,34 @@ const path = {
 
 
 function copyFiles(arrOfObj, groupName) {
+  // TODO: MERGE LOOPS
+
+  // COPY NON BINARY FILES AND CHANGE LINE ENDING
   arrOfObj.forEach((obj) => {
     gulp.src(obj.from)
+      .pipe(isBinary())
+      .pipe(through.obj((file, enc, next) => {
+        if (file.isBinary()) {
+          next();
+          return;
+        }
+        next(null, file);
+      }))
+      .pipe(lec({ eolc: 'CRLF' }))
+      .pipe(obj.to ? gulp.dest(obj.to) : gulp.dest(path.src.staticDir[groupName]));
+  });
+  // COPY BINARY FILES WITHOUT CHANGING LINE ENDING
+  arrOfObj.forEach((obj) => {
+    gulp.src(obj.from)
+      .pipe(isBinary())
+      .pipe(through.obj((file, enc, next) => {
+        if (!file.isBinary()) {
+          next();
+          return;
+        }
+        next(null, file);
+      }))
+      // .pipe(lec({ eolc: 'CRLF' }))
       .pipe(obj.to ? gulp.dest(obj.to) : gulp.dest(path.src.staticDir[groupName]));
   });
 }
