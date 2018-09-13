@@ -1,11 +1,19 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,800');
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: $font1;
+}
+
+input {
+  font-family: $font1;
 }
 
 blockquote {
   margin: 0;
+}
+
+cite {
+  font-style: normal;
 }
 
 a {
@@ -31,4 +39,13 @@ h1, .h1 {
   font-size: 4.375em;
   text-transform: uppercase;
   line-height: .5;
+}
+
+h2, .h2 {
+  color: $color2;
+  font-weight: 600;
+  font-size: 2.1875em;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1;
 }

@@ -12,17 +12,45 @@
   text-transform: uppercase;
   text-align: center;
   line-height: 50px;
+  transition: background-color 0.2s, border 0.2s, color 0.2s;
   &:hover {
     background-color: $color1h;
     color: #fff;
   }
 
-  &--secondary {
+  &__ghost {
     background-color: transparent;
     border: 1px solid rgba(255,255,255,0.2);
     &:hover {
       background-color: transparent;
       border: 1px solid rgba(255,255,255,0.5);
     }
+  }
+
+  &__ghost--dark {
+    color: $color2;
+    background-color: transparent;
+    border: 1px solid rgba(0,0,0,0.2);
+    &:hover {
+      color: $color2;
+      background-color: transparent;
+      border: 1px solid rgba(0,0,0,0.5);
+    }
+  }
+
+  &--white {
+    background-color: #fff;
+    color: $color2;
+    border: 1px solid rgba(255,255,255,1);
+    &:hover {
+      // background-color: #fff;
+      color: #fff;
+      background-color: transparent;
+      border: 1px solid rgba(255,255,255,0.5);
+    }
+  }
+
+  &--resetForm {
+    border: 0;
   }
 }

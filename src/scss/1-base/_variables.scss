@@ -1,6 +1,7 @@
 // Colors
 $color1: #f7600e;
-$color1h: lighten($color1, 10%);
+// $color1h: lighten($color1, 10%);
+$color1h: darken($color1, 5%);
 $color2: #3b434c;
 
 $white:  #fff;
@@ -13,6 +14,8 @@ $regular: 400;
 $bold: 600;
 
 // Base Font
+$font1: 'Open Sans', sans-serif;
+
 $base-font-family: sans-serif;
 $base-font-weight: $regular;
 $base-font-size: 13px;
