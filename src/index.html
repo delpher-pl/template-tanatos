@@ -62,8 +62,8 @@
         </div>
   
         <div class="header__buttons">
-          <a href="#" class="btn btn">Hire Us</a>
-          <a href="#" class="btn btn--secondary">Our Works</a>
+          <a href="#" class="btn">Hire Us</a>
+          <a href="#" class="btn btn__ghost">Our Works</a>
         </div>
   
         <div class="header__show-more"><i class="fa fa-arrow-down"></i></div>
@@ -109,130 +109,146 @@
     </section>
 
     <section class="page__newsletter">
-      <h2 class="screenreader">Newsletter</h2>
-      <form action="#" method="post">
-        <input type="text" name="" id="">
-        <input type="submit" value=" ">
-      </form>
+      <div class="l-content">
+        <h2 class="screenreader">Newsletter</h2>
+        <form action="#" method="post" class="newsletter__form">
+          <input type="text" name="" id="" placeholder="Enter Your email adress for newsletter" class="newsletter__email">
+          <input type="submit" value="Subscribe" class="btn btn--resetForm" id="newsletter-submit">
+        </form>
+      </div>
     </section>
 
     <section class="page__works">
+      <div class="l-content">
         <h2>Our <em>Works</em></h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non aperiam maxime reiciendis velit, dolor qui quia dolorum rerum cupiditate quibusdam!</p>
+        <p class="works__subheader">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
 
-        <ul>
-          <li class="work__item">
-            <div class="work__content">
-              <h3 class="work__title">Abazoo Website</h3>
-              <p class="work__description">
+        <ul class="works__gallery">
+          <li class="works__item">
+            <img src="https://source.unsplash.com/random/280x280?aaa=0" alt="work image" class="works__bgimg">
+            <div class="works__content">
+              <h3 class="works__title">Abazoo Website</h3>
+              <p class="works__description">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex vero voluptatibus temporibus.
               </p>
-              <a href="#" class="work__button">Show Project</a>
+              <a href="#" class="works__button btn btn--white">Show Project</a>
             </div>
           </li>
-          <li class="work__item">
-            <div class="work__content">
-              <h3 class="work__title">Abazoo Website</h3>
-              <p class="work__description">
+          <li class="works__item">
+            <img src="https://source.unsplash.com/random/280x280?aaa=1" alt="work image" class="works__bgimg">
+            <div class="works__content">
+              <h3 class="works__title">Abazoo Website</h3>
+              <p class="works__description">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex vero voluptatibus temporibus.
               </p>
-              <a href="#" class="work__button">Show Project</a>
+              <a href="#" class="works__button btn btn--white">Show Project</a>
             </div>
           </li>
-          <li class="work__item">
-            <div class="work__content">
-              <h3 class="work__title">Abazoo Website</h3>
-              <p class="work__description">
+          <li class="works__item">
+            <img src="https://source.unsplash.com/random/280x280?aaa=2" alt="work image" class="works__bgimg">
+            <div class="works__content">
+              <h3 class="works__title">Abazoo Website</h3>
+              <p class="works__description">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex vero voluptatibus temporibus.
               </p>
-              <a href="#" class="work__button">Show Project</a>
+              <a href="#" class="works__button btn btn--white">Show Project</a>
             </div>
           </li>
-          <li class="work__item">
-            <div class="work__content">
-              <h3 class="work__title">Abazoo Website</h3>
-              <p class="work__description">
+          <li class="works__item">
+            <img src="https://source.unsplash.com/random/280x280?aaa=3" alt="work image" class="works__bgimg">
+            <div class="works__content">
+              <h3 class="works__title">Abazoo Website</h3>
+              <p class="works__description">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex vero voluptatibus temporibus.
               </p>
-              <a href="#" class="work__button">Show Project</a>
+              <a href="#" class="works__button btn btn--white">Show Project</a>
             </div>
           </li>
-          <li class="work__item">
-            <div class="work__content">
-              <h3 class="work__title">Abazoo Website</h3>
-              <p class="work__description">
+          <li class="works__item">
+            <img src="https://source.unsplash.com/random/280x280?aaa=4" alt="work image" class="works__bgimg">
+            <div class="works__content">
+              <h3 class="works__title">Abazoo Website</h3>
+              <p class="works__description">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex vero voluptatibus temporibus.
               </p>
-              <a href="#" class="work__button">Show Project</a>
+              <a href="#" class="works__button btn btn--white">Show Project</a>
             </div>
           </li>
-          <li class="work__item">
-            <div class="work__content">
-              <h3 class="work__title">Abazoo Website</h3>
-              <p class="work__description">
+          <li class="works__item">
+            <img src="https://source.unsplash.com/random/280x280?aaa=5" alt="work image" class="works__bgimg">
+            <div class="works__content">
+              <h3 class="works__title">Abazoo Website</h3>
+              <p class="works__description">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex vero voluptatibus temporibus.
               </p>
-              <a href="#" class="work__button">Show Project</a>
+              <a href="#" class="works__button btn btn--white">Show Project</a>
             </div>
           </li>
         </ul>
-        <a href="#" class="btn">Show More</a>
+        <div class="works__more">
+          <a href="#" class="btn btn__ghost--dark">Show More</a>
+        </div>
+      </div>
     </section>
 
     <section class="page__testimonials">
-      <div class="testimonials__navigation">
-        <a href="#" class="testimonials__prev">prev</a>
-        <a href="#" class="testimonials__next">next</a>
+      <div class="l-content l-pos-rel">
+        <h2 class="screenreader">Testimonials</h2>
+        <!-- <div class="testimonials__navigation"> -->
+          <a href="#" class="testimonials__navigation testimonials__prev">prev</a>
+          <a href="#" class="testimonials__navigation testimonials__next">next</a>
+        <!-- </div> -->
+
+        <div class="testimonials__wrapper">
+          <ul class="testimonials__list">
+            <li class="testimonials__item">
+              <figure class="testimonials__figure">
+                <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="photo" class="testimonials__photo">
+                <blockquote class="testimonials__quote">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi illo facere eos.</blockquote>
+                <figcaption class="testimonials__author">
+                  <cite>John Doe</cite>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="testimonials__item">
+              <figure class="testimonials__figure">
+                <img src="https://randomuser.me/api/portraits/men/47.jpg" alt="photo" class="testimonials__photo">
+                <blockquote class="testimonials__quote">These guys are incredible! I get my project in 10 days and it was awesome!<br>Very good service! Highly recommended!</blockquote>
+                <figcaption class="testimonials__author">
+                  <cite>John Smith</cite>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="testimonials__item">
+              <figure class="testimonials__figure">
+                <img src="https://randomuser.me/api/portraits/men/48.jpg" alt="photo" class="testimonials__photo">
+                <blockquote class="testimonials__quote">These guys are incredible! I get my project in 10 days and it was awesome!<br>Very good service! Highly recommended!.</blockquote>
+                <figcaption class="testimonials__author">
+                  <cite>John Smith</cite>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="testimonials__item">
+              <figure class="testimonials__figure">
+                <img src="https://randomuser.me/api/portraits/men/49.jpg" alt="photo" class="testimonials__photo">
+                <blockquote class="testimonials__quote">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi illo facere eos.</blockquote>
+                <figcaption class="testimonials__author">
+                  <cite>John Doe</cite>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="testimonials__item">
+              <figure class="testimonials__figure">
+                <img src="https://randomuser.me/api/portraits/men/50.jpg" alt="photo" class="testimonials__photo">
+                <blockquote class="testimonials__quote">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi illo facere eos.</blockquote>
+                <figcaption class="testimonials__author">
+                  <cite>John Doe</cite>
+                </figcaption>
+              </figure>
+            </li>
+          </ul>
+        </div>
       </div>
-
-      <ul class="testimonials__list">
-        <li class="testimonials__item">
-          <figure class="testimonials__figure">
-            <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="photo" class="testimonials__photo">
-            <blockquote class="testimonials__quote">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi illo facere eos.</blockquote>
-            <figcaption class="testimonials__author">
-              <cite>John Doe</cite>
-            </figcaption>
-          </figure>
-        </li>
-        <li class="testimonials__item">
-          <figure class="testimonials__figure">
-            <img src="https://randomuser.me/api/portraits/men/47.jpg" alt="photo" class="testimonials__photo">
-            <blockquote class="testimonials__quote">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi illo facere eos.</blockquote>
-            <figcaption class="testimonials__author">
-              <cite>John Doe</cite>
-            </figcaption>
-          </figure>
-        </li>
-        <li class="testimonials__item">
-          <figure class="testimonials__figure">
-            <img src="https://randomuser.me/api/portraits/men/48.jpg" alt="photo" class="testimonials__photo">
-            <blockquote class="testimonials__quote">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi illo facere eos.</blockquote>
-            <figcaption class="testimonials__author">
-              <cite>John Doe</cite>
-            </figcaption>
-          </figure>
-        </li>
-        <li class="testimonials__item">
-          <figure class="testimonials__figure">
-            <img src="https://randomuser.me/api/portraits/men/49.jpg" alt="photo" class="testimonials__photo">
-            <blockquote class="testimonials__quote">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi illo facere eos.</blockquote>
-            <figcaption class="testimonials__author">
-              <cite>John Doe</cite>
-            </figcaption>
-          </figure>
-        </li>
-        <li class="testimonials__item">
-          <figure class="testimonials__figure">
-            <img src="https://randomuser.me/api/portraits/men/50.jpg" alt="photo" class="testimonials__photo">
-            <blockquote class="testimonials__quote">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi illo facere eos.</blockquote>
-            <figcaption class="testimonials__author">
-              <cite>John Doe</cite>
-            </figcaption>
-          </figure>
-        </li>
-      </ul>
-
     </section>
 
     <section class="page__team">
