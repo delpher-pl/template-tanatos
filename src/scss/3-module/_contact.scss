@@ -1,0 +1,87 @@
+.page__contact {
+  position: relative;
+  padding: 70px 0 100px 0;
+  overflow: hidden;
+  background-image: 
+    linear-gradient( 
+      rgba(mix(#3b434c, #000000, 100%),0.9) 0%,
+      rgba(mix(#3b434c, #000000, 60%),0.9) 100%
+    ),
+    url('/img/header_bg_full.jpg');
+  background-size: cover;
+  color: #ffffff;
+}
+
+.contact {
+  &__header {
+    color: #fff;
+  }
+  &__subheader {
+    // color: $color2;
+    text-align: center;
+    line-height: 1.875em;
+    width: 60%;
+    margin: -12px auto 90px auto;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+  &__row {
+    // border: 1px solid #f00;
+    margin-bottom: 40px;
+    &--top {
+      display: flex;
+      justify-content: space-between;
+    }
+    &--bottom {
+      // border: 1px solid #f00;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  &__input {
+    &--email {
+      width: calc(50% - 20px);
+    }
+    &--subject {
+      width: calc(50% - 20px);
+    }
+    &--message {
+      width: 100%;
+      resize: vertical;
+    }
+  }
+
+  &__social {
+    display: flex;
+    margin: 0;
+  }
+  &__social-item {
+    width: 43px;
+    height: 43px;
+    line-height: 43px;
+    text-align: center;
+    margin: 0 0 0 10px;
+    color: #fff;
+    // background-color: rgba(#f00, 0.5);
+    display: flex;
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      // border: 1px solid #0f0;
+    }
+    i {
+      transition: color 0.2s;      
+      // border: 1px solid #f00;
+      color: #fff;
+    }
+    &:hover {
+      i {
+        color: $color1;
+      }
+    }
+  }
+}
