@@ -1,0 +1,24 @@
+.page__footer {
+  padding: 1px;
+  height: 105px;
+  line-height: 105px;
+  background-color: $color2;
+  color: #ffffff;
+}
+
+.footer {
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+  }
+  &__logo {
+    height: 1em;
+    vertical-align: middle;
+    transition: opacity 0.3s;
+    &:hover {
+      opacity: 0.5;
+    }
+
+  }
+}
