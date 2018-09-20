@@ -1,9 +1,9 @@
 .page__footer {
-  padding: 1px;
   height: 105px;
   line-height: 105px;
   background-color: $color2;
   color: #ffffff;
+  overflow: hidden;
 }
 
 .footer {
@@ -19,6 +19,5 @@
     &:hover {
       opacity: 0.5;
     }
-
   }
 }
