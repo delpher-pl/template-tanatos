@@ -1,5 +1,4 @@
 .page__team {
-  // position: relative;
   padding: 70px 0 90px 0;
 }
 
@@ -12,15 +11,12 @@
     margin: -12px auto 50px auto;
   }
   &__wrapper {
-    // border: 1px solid #0ff;
     position: relative;
     overflow: hidden;
     height: 550px;
     margin: 50px 0 50px 0;
   }
   &__slider {
-    // border: 1px solid #f00;
-    // overflow: hidden;
     position: absolute;
     top: 0;
     left: 0;
@@ -33,13 +29,8 @@
     height: 100%;
     transition: transform 0.3s;
     transform: translateX(0%);
-    // &:hover {
-    //   // transform: translateX(-100%);
-    // }
   }
   &__slide {
-    // border: 1px solid #0f0;
-    // display: block;
     height: 100%;
     min-width: 100%;
     width: 100%;
@@ -50,14 +41,13 @@
     justify-content: space-between;
   }
   &__person {
-    // border: 1px solid #000;
-    // background-color: #f6f6f6;
     position: relative;
     width: calc(25% - 30px);
     text-align: center;
     &:hover {
       .team__photo {
         transform: scale(1.1);
+        filter: grayscale(0%);
       }
       .team__photo-line {
         transform: scaleX(1.1);
@@ -83,14 +73,14 @@
     }
   }
   &__photo {
-    // position: relative;
     width: 100%;
     height: 220px;
     object-fit: cover;
     border-radius: 10px;
-    transition: transform 0.3s;
+    transition: transform 0.3s, filter 0.3s;
     transform: scale(1);
     transform-origin: center bottom;
+    filter: grayscale(100%);
   }
   &__photo-line {
     position: absolute;
@@ -116,7 +106,6 @@
     transition: opacity 0.3s;
   }
   &__social {
-    // border: 1px solid #f00;
     display: flex;
     justify-content: center;
     margin-bottom: 24px;
@@ -131,15 +120,6 @@
       color: $color2;
       transition: color 0.3s;
     }
-    // .fa-facebook {
-    //   color: #205b9f;
-    // }
-    // .fa-twitter {
-    //   color: #00ace3;
-    // }
-    // .fa-google-plus {
-    //   color: #ff3921;
-    // }
   }
   &__info {
     margin: 0 7px;
@@ -173,7 +153,6 @@
     }
   }
   &__pagination {
-    // border: 1px solid #f00;
     display: flex;
     justify-content: center;
   }
