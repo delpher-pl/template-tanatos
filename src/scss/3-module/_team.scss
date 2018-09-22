@@ -60,15 +60,9 @@
       }
       .team__social-item {
         opacity: 1;
-        .fa-facebook {
-          color: #205b9f;
-        }
-        .fa-twitter {
-          color: #00ace3;
-        }
-        .fa-google-plus {
-          color: #ff3921;
-        }
+      }
+      .team__social-icon {
+        filter: grayscale(0%);
       }
     }
   }
@@ -116,9 +110,13 @@
     font-size: 1em;
     opacity: 0.5;
     transition: opacity 0.3s;
-    .fa {
-      color: $color2;
-      transition: color 0.3s;
+  }
+  &__social-icon {
+    height: 1.5em;
+    transition: transform 0.15s, filter 0.3s;
+    filter: grayscale(100%);
+    &:hover {
+      transform: scale(1.2);
     }
   }
   &__info {
