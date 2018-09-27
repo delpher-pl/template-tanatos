@@ -16,10 +16,8 @@
   &__navigation {
     color: rgba(#fff, 0.3);
     font-size: 2.5em;
-    // border: 1px solid #f00;
     position: absolute;
     top: 50%;
-    // bottom: 0;
     width: 100px;
     height: 100px;
     line-height: 100px;
@@ -28,7 +26,6 @@
     cursor: pointer;
     z-index: 1;
     &:hover {
-      // background-color: rgba(#fff, 0.2);
       color: #fff;
     }
   }
@@ -40,7 +37,6 @@
   }
   &__wrapper {
     position: relative;
-    // border: 1px solid #0ff;
     overflow: hidden;
     height: 300px;
     margin: 100px 0;
@@ -56,25 +52,16 @@
     flex-grow: 1;
     width: 100%;
     margin: 0;
-    // border: 1px solid #f00;
-    // overflow: hidden;
     height: 300px;
     transition: transform 0.3s;
-    transform: translateX(-100%);
-    &:hover {
-      transform: translateX(-200%);
-    }
+    transform: translateX(0%);
   }
   &__item {
-    // border: 1px solid #0f0;/
-    // display: block;
     height: 100%;
     min-width: 100%;
     width: 100%;
   }
   &__figure {
-    // border: 1px solid #f00;
-    // background-color: rgba(#fff, 0.2);
     margin: 0 50px;
     text-align: center;
     height: 100%;
