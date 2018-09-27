@@ -3,10 +3,13 @@ const browserSync = require('browser-sync').create();
 const tildeImporter = require('node-sass-tilde-importer');
 const del = require('del');
 const sourcemaps = require('gulp-sourcemaps');
-const concat = require('gulp-concat');
+// const concat = require('gulp-concat');
 const lec = require('gulp-line-ending-corrector');
 const isBinary = require('gulp-is-binary');
 const through = require('through2'); // transform the stream
+const browserify = require('browserify');
+const source = require('vinyl-source-stream');
+const buffer = require('vinyl-buffer');
 
 // HTML
 const htmlReplace = require('gulp-html-replace');
@@ -154,12 +157,14 @@ gulp.task('sass', (done) => {
 });
 
 gulp.task('js', (done) => {
-  gulp.src([
-    path.src.jsFilesAll,
-  ])
-    .pipe(concat('main.js'))
+  browserify(path.src.jsFileMain).bundle()
+    // .on('error', function(e){console.log("BROWSERIFY: ",e);})
+    .pipe(source('main.js'))
+    .pipe(buffer())
     .pipe(babel({ presets: ['es2015'] }))
+    // .on('error', function(e){console.log("BABEL: ",e);})
     .pipe(uglify())
+    // .on('error', function(e){console.log("UGLIFY: ",e);})
     .pipe(gulp.dest(path.dist.js));
   done();
 });
