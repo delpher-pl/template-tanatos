@@ -8,7 +8,7 @@ const testimonialsNext = document.querySelector('#testimonials-next');
 
 testimonialsSlider.addEventListener('changeSlide', () => {
   console.log('changeSlide detected in testimonials!');
-});
+}, false);
 
 testimonialsPrev.addEventListener('click', (ev) => {
   ev.preventDefault();
