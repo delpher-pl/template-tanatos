@@ -13,7 +13,7 @@ function updatePagination(sliderEl) {
 
 teamSlider.addEventListener('changeSlide', () => {
   updatePagination(teamSlider);
-});
+}, false);
 
 teamPagination.addEventListener('change', (ev) => {
   selectedSlide = ev.target.value;
