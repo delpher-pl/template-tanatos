@@ -8,9 +8,6 @@
       rgba(mix(#3b434c, #000000, 60%),0.9) 100%
     ),
     url('/img/header_bg_full.jpg');
-  // background-image: 
-  //   linear-gradient(rgba(#3b434c,0.8), rgba(#3b434c,0.9)),
-  //   url('/img/header_bg_full.jpg');
   background-size: cover;
   color: #ffffff;
 }
@@ -23,5 +20,9 @@
   &__email {
     flex-grow: 1;
     margin-right: 30px;
+    &:invalid {
+      border: 1px solid red;
+      background-color: mix(#ff0000, #ffffff, 20%);
+    }
   }
 }
