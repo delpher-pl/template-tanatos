@@ -9,16 +9,20 @@ newsletterInput.addEventListener('change', (ev) => {
 
   if (isValidEmail(INPUT_EL.value)) {
     newsletterBtn.classList.remove('btn--error');
+    newsletterBtn.value = 'Subscribe';
   }
 }, false);
 
 newsletterBtn.addEventListener('click', (ev) => {
   ev.preventDefault();
+  const BUTTON_EL = ev.target;
 
   if (isValidEmail(newsletterInput.value)) {
     console.log('Valid email! Can send it to server.');
-    ev.target.classList.remove('btn--error');
+    BUTTON_EL.classList.remove('btn--error');
+    BUTTON_EL.value = 'Subscribe';
   } else {
-    ev.target.classList.add('btn--error');
+    BUTTON_EL.classList.add('btn--error');
+    BUTTON_EL.value = 'Invalid email!';
   }
 }, false);
