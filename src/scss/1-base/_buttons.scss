@@ -53,4 +53,14 @@
   &--resetForm {
     border: 0;
   }
+
+  &--error {
+    background-color: $error;
+    color: $white;
+    animation: shake-horizontal 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+    &:hover {
+      background-color: $error;
+      color: $white;
+    }
+  }
 }
