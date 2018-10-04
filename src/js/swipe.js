@@ -18,22 +18,22 @@ class Swipe {
   addEventListeners() {
     this.detectEl.addEventListener('touchstart', (ev) => {
       this.begin(ev);
-    });
+    }, false);
     this.detectEl.addEventListener('mousedown', (ev) => {
       this.begin(ev);
-    });
+    }, false);
     this.detectEl.addEventListener('touchmove', (ev) => {
       this.move(ev);
-    });
+    }, false);
     this.detectEl.addEventListener('touchend', (ev) => {
       this.end(ev);
-    });
+    }, false);
     this.detectEl.addEventListener('touchcancel', (ev) => {
       this.end(ev);
-    });
+    }, false);
     this.detectEl.addEventListener('mouseup', (ev) => {
       this.end(ev);
-    });
+    }, false);
   }
 
   begin(ev) {
