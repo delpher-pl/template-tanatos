@@ -23,3 +23,13 @@ textarea {
     box-shadow: 0 0 15px rgba(0,0,0,0.8);
   }
 }
+
+.input-ok {
+  border: 1px solid $correct;
+  background-color: mix($correct, #ffffff, 10%);
+}
+
+.input-err {
+  border: 1px solid $error;
+  background-color: mix($error, #ffffff, 20%);
+}
