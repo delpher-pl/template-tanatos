@@ -702,11 +702,11 @@
     
           <form action="/" class="contact__form">
             <div class="contact__row contact__row--top">
-              <input type="text" name="contact-email" id="contact-email" placeholder="Your Email" class="contact__input contact__input--email">
-              <input type="text" name="contact-subject" id="contact-subject" placeholder="Subject" class="contact__input contact__input--subject">
+              <input type="email" name="contact-email" id="contact-email" placeholder="Your Email" class="contact__input contact__input--email" pattern="^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$" title="Please enter valid email address." required>
+              <input type="text" name="contact-subject" id="contact-subject" placeholder="Subject" class="contact__input contact__input--subject" pattern="[\w\W]*\w[\w\W]*" title="Please enter subject of message" required>
             </div>
             <div class="contact__row">
-              <textarea name="contact-message" id="contact-message" cols="30" rows="10" class="contact__input contact__input--message" placeholder="Your Message"></textarea>
+              <textarea name="contact-message" id="contact-message" cols="30" rows="10" class="contact__input contact__input--message" placeholder="Your Message" title="Please enter your message" required></textarea>
             </div>
             <div class="contact__row contact__row--bottom">
               <input type="submit" value="Hire Us" class="btn btn--resetForm" id="contact-submit">
