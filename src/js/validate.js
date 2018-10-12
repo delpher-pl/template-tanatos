@@ -18,6 +18,7 @@ class Validate {
 
   init() {
     this._addEventListeners();
+    this._checkAllRules();
   }
 
   _addEventListeners() {
