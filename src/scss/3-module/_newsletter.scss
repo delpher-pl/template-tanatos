@@ -20,9 +20,5 @@
   &__email {
     flex-grow: 1;
     margin-right: 30px;
-    &:invalid {
-      border: 1px solid red;
-      background-color: mix(#ff0000, #ffffff, 20%);
-    }
   }
 }
