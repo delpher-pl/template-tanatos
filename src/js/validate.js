@@ -28,6 +28,11 @@ class Validate {
         const RE = pairArr[1];
 
         EL.value = ev.target.value.trim();
+
+        if (EL.attributes.type && EL.attributes.type.value.toLowerCase() === 'email') {
+          EL.value = EL.value.toLowerCase();
+        }
+
         if (RE.test(ev.target.value)) {
           EL.classList.remove('input-err');
           EL.classList.add('input-ok');
