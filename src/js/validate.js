@@ -52,7 +52,7 @@ class Validate {
       } else {
         this._submitErrorAdd();
       }
-    });
+    }, false);
   }
 
   _checkAllRules() {
