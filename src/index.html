@@ -43,7 +43,62 @@
 
 <body class="page">
 
-  <div class="page__menu"></div>
+  <nav class="page__menu page__menu--show" id="page-menu">
+    <div class="l-content l-pos-rel l-p-1">
+      <a class="menu__close" id="menu-close">
+        <i class="menu__close-icon fa fa-close"></i>
+      </a>
+      <div class="menu__wrapper">
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a href="#" class="menu__link">Home</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link">About Us</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link">Services</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link">Our Works</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link">Contact</a>
+          </li>
+        </ul>
+
+        <div class="menu__separator"></div>
+
+        <ul class="menu__social-list">
+          <li class="menu__social-item">
+            <a href="#" class="menu__social-link">
+              <img src="/icons/facebook.svg" alt="Facebook" class="menu__social-icon">
+            </a>
+          </li>
+          <li class="menu__social-item">
+            <a href="#" class="menu__social-link">
+              <img src="/icons/twitter.svg" alt="Twitter" class="menu__social-icon">
+            </a>
+          </li>
+          <li class="menu__social-item">
+            <a href="#" class="menu__social-link">
+              <img src="/icons/googleplus.svg" alt="Google+" class="menu__social-icon">
+            </a>
+          </li>
+          <li class="menu__social-item">
+            <a href="#" class="menu__social-link">
+              <img src="/icons/dribbble.svg" alt="Dribbble" class="menu__social-icon">
+            </a>
+          </li>
+          <li class="menu__social-item">
+            <a href="#" class="menu__social-link">
+              <img src="/icons/behance.svg" alt="Behance" class="menu__social-icon">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
   <div class="page__modal"></div>
   <div class="page__content">
 
@@ -53,7 +108,7 @@
           <a href="./">
             <img src="./img/logo.png" alt="TanatosStudio logo" class="header__logo">
           </a>
-          <a href="#" class="header__menu">Menu<i class="fa fa-bars"></i></a>
+          <a href="#" class="header__menu" id="header-menu">Menu<i class="fa fa-bars"></i></a>
         </div>
   
         <div class="header__text">
