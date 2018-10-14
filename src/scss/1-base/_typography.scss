@@ -19,7 +19,7 @@ cite {
 a {
   color: $color1;
   text-decoration: none;
-
+  transition: color 0.2s;
   &:hover {
     color: $color1h;
   }
