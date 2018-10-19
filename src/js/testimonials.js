@@ -10,9 +10,21 @@ testimonialsSlider.addEventListener('changeSlide', () => {
   console.log('changeSlide detected in testimonials!');
 }, false);
 
+testimonialsPrev.addEventListener('touchend', (ev) => {
+  ev.stopPropagation();
+  ev.preventDefault();
+  ev.target.click();
+}, false);
+
 testimonialsPrev.addEventListener('click', (ev) => {
   ev.preventDefault();
   moveSlide(-1, testimonialsSlider);
+}, false);
+
+testimonialsNext.addEventListener('touchend', (ev) => {
+  ev.stopPropagation();
+  ev.preventDefault();
+  ev.target.click();
 }, false);
 
 testimonialsNext.addEventListener('click', (ev) => {
