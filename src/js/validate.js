@@ -45,6 +45,12 @@ class Validate {
       }, false);
     });
 
+    this.submitEl.addEventListener('touchend', (ev) => {
+      ev.stopPropagation();
+      ev.preventDefault();
+      ev.target.click();
+    }, false);
+
     this.submitEl.addEventListener('click', (ev) => {
       ev.preventDefault();
       if (this.isAllRight) {
