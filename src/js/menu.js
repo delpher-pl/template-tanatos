@@ -39,6 +39,7 @@ function showButtonHandler() {
 
 
 closeBtn.addEventListener('touchend', (ev) => {
+  ev.stopPropagation();
   ev.preventDefault();
   ev.target.click();
 }, false);
@@ -48,6 +49,7 @@ closeBtn.addEventListener('click', () => {
 }, false);
 
 showBtn.addEventListener('touchend', (ev) => {
+  ev.stopPropagation();
   ev.preventDefault();
   ev.target.click();
 }, false);
