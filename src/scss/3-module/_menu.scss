@@ -49,6 +49,42 @@
         animation-delay: 350ms;
       }
     }
+
+    .menu__social-item {
+      opacity: 0;
+      &:nth-last-of-type(1) {
+        animation: show-menu-socialitem 0.3s ease forwards;
+        animation-delay: 0ms;
+      }
+      &:nth-last-of-type(2) {
+        animation: show-menu-socialitem 0.3s ease forwards;
+        animation-delay: 50ms;
+      }
+      &:nth-last-of-type(3) {
+        animation: show-menu-socialitem 0.3s ease forwards;
+        animation-delay: 100ms;
+      }
+      &:nth-last-of-type(4) {
+        animation: show-menu-socialitem 0.3s ease forwards;
+        animation-delay: 150ms;
+      }
+      &:nth-last-of-type(5) {
+        animation: show-menu-socialitem 0.3s ease forwards;
+        animation-delay: 200ms;
+      }
+      &:nth-last-of-type(6) {
+        animation: show-menu-socialitem 0.3s ease forwards;
+        animation-delay: 250ms;
+      }
+      &:nth-last-of-type(7) {
+        animation: show-menu-socialitem 0.3s ease forwards;
+        animation-delay: 300ms;
+      }
+      &:nth-last-of-type(8) {
+        animation: show-menu-socialitem 0.3s ease forwards;
+        animation-delay: 350ms;
+      }
+    }
   }
   &--show {
     display: block;
@@ -89,6 +125,42 @@
       }
       &:nth-of-type(8) {
         animation: hide-menu-item 0.3s ease-in forwards;
+        animation-delay: 350ms;
+      }
+    }
+
+    .menu__social-item {
+      opacity: 1;
+      &:nth-last-of-type(1) {
+        animation: hide-menu-socialitem 0.3s ease-in forwards;
+        animation-delay: 0ms;
+      }
+      &:nth-last-of-type(2) {
+        animation: hide-menu-socialitem 0.3s ease-in forwards;
+        animation-delay: 50ms;
+      }
+      &:nth-last-of-type(3) {
+        animation: hide-menu-socialitem 0.3s ease-in forwards;
+        animation-delay: 100ms;
+      }
+      &:nth-last-of-type(4) {
+        animation: hide-menu-socialitem 0.3s ease-in forwards;
+        animation-delay: 150ms;
+      }
+      &:nth-last-of-type(5) {
+        animation: hide-menu-socialitem 0.3s ease-in forwards;
+        animation-delay: 200ms;
+      }
+      &:nth-last-of-type(6) {
+        animation: hide-menu-socialitem 0.3s ease-in forwards;
+        animation-delay: 250ms;
+      }
+      &:nth-last-of-type(7) {
+        animation: hide-menu-socialitem 0.3s ease-in forwards;
+        animation-delay: 300ms;
+      }
+      &:nth-last-of-type(8) {
+        animation: hide-menu-socialitem 0.3s ease-in forwards;
         animation-delay: 350ms;
       }
     }
