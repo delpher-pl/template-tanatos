@@ -17,10 +17,14 @@ class Swipe {
 
   addEventListeners() {
     this.detectEl.addEventListener('touchstart', (ev) => {
-      this.begin(ev);
+      if (ev.target === this.detectEl) {
+        this.begin(ev);
+      }
     }, false);
     this.detectEl.addEventListener('mousedown', (ev) => {
-      this.begin(ev);
+      if (ev.target === this.detectEl) {
+        this.begin(ev);
+      }
     }, false);
     this.detectEl.addEventListener('touchmove', (ev) => {
       this.move(ev);
