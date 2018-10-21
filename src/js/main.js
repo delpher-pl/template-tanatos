@@ -1,3 +1,4 @@
+require('./modal.js');
 require('./menu.js');
 require('./header.js');
 require('./newsletter.js');
