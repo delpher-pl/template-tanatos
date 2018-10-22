@@ -50,22 +50,22 @@
       </a>
       <div class="menu__wrapper">
         <ul class="menu__list">
-          <li class="menu__item">
-            <a href="#dontscroll" class="menu__link">Home</a>
-          </li>
-          <li class="menu__item">
-            <a href="#dontscroll" class="menu__link">About Us</a>
-          </li>
-          <li class="menu__item">
-            <a href="#dontscroll" class="menu__link">Services</a>
-          </li>
-          <li class="menu__item">
-            <a href="#dontscroll" class="menu__link">Our Works</a>
-          </li>
-          <li class="menu__item">
-            <a href="#dontscroll" class="menu__link">Contact</a>
-          </li>
-        </ul>
+            <li class="menu__item">
+              <a href="#dontscroll" class="menu__link">Home</a>
+            </li>
+            <li class="menu__item">
+              <a href="#dontscroll" class="menu__link">About Us</a>
+            </li>
+            <li class="menu__item">
+              <a href="#dontscroll" class="menu__link">Services</a>
+            </li>
+            <li class="menu__item">
+              <a href="#dontscroll" class="menu__link">Our Works</a>
+            </li>
+            <li class="menu__item">
+              <a href="#dontscroll" class="menu__link">Contact</a>
+            </li>
+          </ul>
 
         <div class="menu__separator"></div>
 
@@ -99,7 +99,29 @@
       </div>
     </div>
   </nav>
-  <div class="page__modal"></div>
+
+  <div class="page__modal page__modal--hide" id="page-modal">
+    <div class="l-content l-pos-rel l-p-1 pointer-events-none">
+      <div class="modal__wrapper">
+        <a class="modal__close" id="modal-close">
+          <i class="modal__close-icon fa fa-close"></i>
+        </a>
+        <div class="modal__window">
+          <h2 class="modal__header">Hire <em>Us</em></h2>
+          <p class="modal__subheader">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum pariatur libero assumenda
+          </p>
+          <form action="/" class="modal__form">
+              <input type="email" name="modal-email" id="modal-email" placeholder="Your Email" class="modal__input modal__input--email" pattern="^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$" title="Please enter valid email address." required>
+              <input type="text" name="modal-subject" id="modal-subject" placeholder="Subject" class="modal__input modal__input--subject" pattern="[\w\W]*\w[\w\W]*" title="Please enter subject of message" required>
+              <textarea name="modal-message" id="modal-message" cols="30" rows="9" class="modal__input modal__input--message" placeholder="Your Message" title="Please enter your message" required></textarea>
+              <input type="submit" value="Send Message" class="btn btn--resetForm modal__submit" id="modal-submit">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="page__content">
 
     <header class="page__header">
