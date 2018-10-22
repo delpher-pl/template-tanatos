@@ -12,7 +12,7 @@ hireusBtn.addEventListener('touchend', (ev) => {
 }, false);
 
 hireusBtn.addEventListener('click', () => {
-  scrollToY(contactSection.getBoundingClientRect().top + window.scrollY, 1500);
+  scrollToY(contactSection.getBoundingClientRect().top + window.pageYOffset, 1500);
 }, false);
 
 ourworksBtn.addEventListener('touchend', (ev) => {
@@ -22,5 +22,5 @@ ourworksBtn.addEventListener('touchend', (ev) => {
 }, false);
 
 ourworksBtn.addEventListener('click', () => {
-  scrollToY(worksSection.getBoundingClientRect().top + window.scrollY, 1500);
+  scrollToY(worksSection.getBoundingClientRect().top + window.pageYOffset, 1500);
 }, false);
