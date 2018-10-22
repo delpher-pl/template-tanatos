@@ -1,3 +1,5 @@
+const { scrollToY } = require('./scroll.js');
+
 const menuSection = document.querySelector('#page-menu');
 const closeBtn = document.querySelector('#menu-close');
 const showBtn = document.querySelector('#header-menu');
@@ -57,3 +59,20 @@ showBtn.addEventListener('touchend', (ev) => {
 showBtn.addEventListener('click', () => {
   showButtonHandler();
 }, false);
+
+
+menuSection.addEventListener('touchend', (ev) => {
+  ev.stopPropagation();
+  ev.preventDefault();
+  ev.target.click();
+}, false);
+
+menuSection.addEventListener('click', (ev) => {
+  if (!ev.target.dataset.scrollto) {
+    return;
+  }
+
+  const scrollToEl = document.querySelector(`.${ev.target.dataset.scrollto}`);
+  scrollToY(scrollToEl.getBoundingClientRect().top + window.pageYOffset, 1500);
+  closeButtonHandler();
+}, true);
