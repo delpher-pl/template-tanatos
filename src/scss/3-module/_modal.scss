@@ -27,6 +27,9 @@
 }
 
 .modal {
+  &__is-displayed {
+    overflow: hidden;
+  }
   &__wrapper {
     position: relative;
     width: 80%;
