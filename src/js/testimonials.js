@@ -6,9 +6,6 @@ const testimonialsSlider = document.querySelector('.testimonials__list');
 const testimonialsPrev = document.querySelector('#testimonials-prev');
 const testimonialsNext = document.querySelector('#testimonials-next');
 
-testimonialsSlider.addEventListener('changeSlide', () => {
-  console.log('changeSlide detected in testimonials!');
-}, false);
 
 testimonialsPrev.addEventListener('touchend', (ev) => {
   ev.stopPropagation();
