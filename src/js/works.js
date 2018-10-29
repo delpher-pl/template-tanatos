@@ -1,16 +1,20 @@
 const showMoreBtn = document.querySelector('#works-show-more');
 const hiddenItemsEl = document.querySelectorAll('.works__item--hide');
+const showMoreContainerEl = document.querySelector('.works__more');
 
 function showItem(el) {
   el.classList.remove('works__item--hide');
 }
 
 function hideButton() {
-  showMoreBtn.classList.add('works__more--hiding');
+  showMoreBtn.classList.add('works__show-more--hiding');
+  showMoreContainerEl.classList.add('works__more--hiding');
   setTimeout(() => {
-    showMoreBtn.classList.remove('works__more--hiding');
-    showMoreBtn.classList.add('works__more--hide');
-  }, 1000);
+    showMoreBtn.classList.add('works__show-more--hide');
+    showMoreBtn.classList.remove('works__show-more--hiding');
+    showMoreContainerEl.classList.add('works__more--hide');
+    showMoreContainerEl.classList.remove('works__more--hiding');
+  }, 510);
 }
 
 function showHiddenItems() {
