@@ -3,3 +3,9 @@
   max-width: 920px;
   margin: 0 auto;
 }
+
+@media screen and (min-width: 1200px) {
+  .l-content {
+    max-width: 1140px;
+  }
+}
