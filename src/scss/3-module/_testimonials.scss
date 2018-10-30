@@ -17,13 +17,12 @@
     color: rgba(#fff, 0.3);
     font-size: 2.5em;
     position: absolute;
-    top: 50%;
+    bottom: -30px;
     width: 100px;
     height: 100px;
     border-radius: 50%;
     line-height: 100px;
     text-align: center;
-    transform: translateY(-50%);
     cursor: pointer;
     pointer-events: all;
     z-index: 1;
@@ -32,16 +31,16 @@
     }
   }
   &__prev {
-    left: -50px;
+    left: 20px;
   }
   &__next {
-    right: -50px;
+    right: 20px;
   }
   &__wrapper {
     position: relative;
     overflow: hidden;
-    height: 300px;
-    margin: 100px 0;
+    height: 400px;
+    margin: 50px 0;
     pointer-events: none;
   }
   &__list {
@@ -54,19 +53,21 @@
     flex-grow: 1;
     width: 100%;
     margin: 0;
-    height: 300px;
+    height: 400px;
     transition: transform 0.3s;
     transform: translateX(0%);
   }
   &__item {
-    height: 100%;
+    position: relative;
     min-width: 100%;
     width: 100%;
   }
   &__figure {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     margin: 0 50px;
     text-align: center;
-    height: 100%;
   }
   &__photo {
     width: 120px;
@@ -75,10 +76,10 @@
     margin-bottom: 35px;
   }
   &__quote {
-    font-size: 1.5625em;
+    font-size: 1.1em;
     font-style: italic;
-    line-height: 1.6;
-    margin-bottom: 35px;
+    line-height: 1.2;
+    margin: 0 auto 35px auto;
     pointer-events: all;
   }
   &__author {
@@ -87,5 +88,49 @@
     font-weight: 600;
     font-style: normal;
     pointer-events: all;
+  }
+}
+
+
+@media screen and (min-width: 480px) {
+  .testimonials {
+    &__quote {
+      font-size: 1.2em;
+      line-height: 1.4;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .testimonials {
+    &__navigation {
+      bottom: 50%;
+      transform: translateY(50%);
+    }
+    &__prev {
+      left: 0px;
+    }
+    &__next {
+      right: 0px;
+    }
+    &__quote {
+      font-size: 1.5625em;
+      line-height: 1.6;
+      padding: 0 50px;
+    }
+  }
+}
+
+@media screen and (min-width: 1050px) {
+  .testimonials {
+    &__prev {
+      left: -50px;
+    }
+    &__next {
+      right: -50px;
+    }
+    &__quote {
+      padding: 0 100px;
+    }
   }
 }
