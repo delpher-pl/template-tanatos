@@ -1,6 +1,6 @@
 .page__contact {
   position: relative;
-  padding: 70px 0 100px 0;
+  padding: 70px 0 70px 0;
   overflow: hidden;
   background-image: 
     linear-gradient( 
@@ -25,32 +25,35 @@
   &__form {
     display: flex;
     flex-direction: column;
+    padding: 0 10px;
   }
   &__row {
     margin-bottom: 40px;
-    &--top {
+    &.contact__row--top {
       display: flex;
+      flex-direction: column;
       justify-content: space-between;
     }
-    &--bottom {
+    &.contact__row--bottom {
       display: flex;
+      flex-direction: column;
       justify-content: space-between;
       align-items: center;
     }
   }
   &__input {
-    &--email {
-      width: calc(50% - 20px);
+    &.contact__input--email {
+      width: 100%;
+      margin-bottom: 40px;
     }
-    &--subject {
-      width: calc(50% - 20px);
+    &.contact__input--subject {
+      width: 100%;
     }
-    &--message {
+    &.contact__input--message {
       width: 100%;
       resize: vertical;
     }
   }
-
   &__social {
     display: flex;
     margin: 0;
@@ -60,10 +63,12 @@
     height: 43px;
     line-height: 43px;
     text-align: center;
-    margin: 0 0 0 20px;
     color: #fff;
     transition: transform 0.2s;
     transform: scale(1);
+    &:not(:first-of-type) {
+      margin: 0 0 0 20px;
+    }
     a {
       display: block;
       width: 100%;
@@ -76,5 +81,41 @@
   &__social-icon {
     width: 100%;
     height: 100%;
+  }
+  &__submit {
+    margin-bottom: 40px;
+  }
+}
+
+
+@media screen and (min-width: 768px) {
+  .page__contact {
+    padding: 70px 0 100px 0;
+  }
+
+  .contact {
+    &__form {
+      padding: 0px;
+    }
+    &__row {
+      &.contact__row--top {
+        flex-direction: row;
+      }
+      &.contact__row--bottom {
+        flex-direction: row;
+      }
+    }
+    &__input {
+      &.contact__input--email {
+        width: calc(50% - 20px);
+        margin-bottom: 0;
+      }
+      &.contact__input--subject {
+        width: calc(50% - 20px);
+      }
+    }
+    &__submit {
+      margin-bottom: 0px;
+    }
   }
 }
