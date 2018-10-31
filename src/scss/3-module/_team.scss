@@ -11,10 +11,11 @@
     margin: -12px auto 50px auto;
   }
   &__wrapper {
+    pointer-events: none;
     position: relative;
     overflow: hidden;
-    height: 550px;
-    margin: 50px 0 50px 0;
+    height: 1600px;
+    margin: 50px 0px;
   }
   &__slider {
     position: absolute;
@@ -31,18 +32,23 @@
     transform: translateX(0%);
   }
   &__slide {
+    pointer-events: none;
     height: 100%;
     min-width: 100%;
     width: 100%;
-    padding-top: 80px;
+    padding-top: 40px;
   }
   &__group {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 50px;
   }
   &__person {
+    pointer-events: all;
     position: relative;
-    width: calc(25% - 30px);
+    width: 100%;
+    margin-bottom: 40px;
     text-align: center;
     &:hover {
       .team__photo {
@@ -67,8 +73,9 @@
     }
   }
   &__photo {
-    width: 100%;
-    height: 220px;
+    width: 160px;
+    max-width: 100%;
+    height: 160px;
     object-fit: cover;
     border-radius: 10px;
     transition: transform 0.3s, filter 0.3s;
@@ -78,13 +85,13 @@
   }
   &__photo-line {
     position: absolute;
-    display: block;
+    display: none;
     height: 5px;
     width: 100%;
     border-radius: 3px;
     background-color: $color1;
     margin: 0 auto;
-    top: 215px;
+    top: 155px;
     left: 0px;
     z-index: 10;
     transition: transform 0.2s;
@@ -92,8 +99,8 @@
     transform-origin: center bottom;
   }
   &__header {
-    margin: 29px 0;
-    font-size: 1.4em;
+    margin: 15px 0;
+    font-size: 1.2em;
     font-weight: 600;
     text-transform: uppercase;
     opacity: 0.5;
@@ -102,8 +109,7 @@
   &__social {
     display: flex;
     justify-content: center;
-    margin-bottom: 24px;
-
+    margin-bottom: 5px;
   }
   &__social-item {
     margin: 0 7px;
@@ -153,5 +159,76 @@
   &__pagination {
     display: flex;
     justify-content: center;
+  }
+}
+
+@media screen and (min-width: 310px) {
+  .team {
+    &__wrapper {
+      height: 1500px;
+    }
+  }
+}
+
+@media screen and (min-width: 380px) {
+  .team {
+    &__wrapper {
+      height: 1350px;
+    }
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .team {
+    &__wrapper {
+      height: 900px;
+    }
+    &__group {
+      margin: 0 20px;
+    }
+    &__person {
+      width: calc(50% - 20px);
+    }
+    &__photo {
+      width: 100%;
+      height: 220px;
+    }
+    &__photo-line {
+      display: block;
+      top: 215px;
+    }
+    &__header {
+      margin: 29px 0;
+      font-size: 1.4em;
+    }
+    &__social {
+      margin-bottom: 24px;
+    }
+  }
+}
+
+@media screen and (min-width: 940px) {
+  .team {
+    &__wrapper {
+      height: 550px;
+      overflow: hidden;
+    }
+    &__group {
+      margin: 0;
+    }
+    &__person {
+      width: calc(25% - 30px);
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team {
+    &__photo {
+      height: 280px;
+    }
+    &__photo-line {
+      top: 275px;
+    }
   }
 }
