@@ -144,16 +144,16 @@
   }
   &__dot {
     display: block;
-    margin: 0 5px;
+    margin: 0 9px;
     width: 12px;
     height: 12px;
     border-radius: 50%;
     background-color: $color2;
-    opacity: 0.5;
+    opacity: 0.35;
     transform: scale(1);
     transition: opacity 0.3s, color 0.1s, transform 0.15s;
     &:hover {
-      opacity: 0.7;
+      opacity: 0.6;
     }
   }
   &__pagination {
