@@ -1,6 +1,8 @@
 .page__footer {
-  height: 105px;
-  line-height: 105px;
+  height: 120px;
+  line-height: 40px;
+  font-size: 80%;
+  padding: 20px 0;
   background-color: $color2;
   color: #ffffff;
   overflow: hidden;
@@ -9,7 +11,9 @@
 .footer {
   &__wrapper {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     text-transform: uppercase;
   }
   &__logo {
@@ -18,6 +22,35 @@
     transition: opacity 0.3s;
     &:hover {
       opacity: 0.5;
+    }
+  }
+}
+
+@media screen and (min-width: 360px) {
+  .page__footer {
+    height: 105px;
+    line-height: 105px;
+    padding: 0;
+  }
+
+  .footer {
+    &__wrapper {
+      flex-direction: row;
+      padding: 0 10px;
+    }
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .page__footer {
+    font-size: 100%;
+  }
+}
+
+@media screen and (min-width: 940px) {
+  .footer {
+    &__wrapper {
+      padding: 0px;
     }
   }
 }
