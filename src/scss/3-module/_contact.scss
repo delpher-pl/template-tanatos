@@ -13,6 +13,9 @@
 }
 
 .contact {
+  &__content {
+    padding: 0;
+  }
   &__header {
     color: #fff;
   }
@@ -119,3 +122,12 @@
     }
   }
 }
+
+@media screen and (min-width: 1200px) {
+  .contact {
+    &__content {
+      padding: 0 155px;
+    }
+  }
+}
+
