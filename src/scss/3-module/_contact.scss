@@ -31,7 +31,7 @@
     padding: 0 10px;
   }
   &__row {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     &.contact__row--top {
       display: flex;
       flex-direction: column;
@@ -47,7 +47,7 @@
   &__input {
     &.contact__input--email {
       width: 100%;
-      margin-bottom: 40px;
+      margin-bottom: 30px;
     }
     &.contact__input--subject {
       width: 100%;
@@ -110,11 +110,11 @@
     }
     &__input {
       &.contact__input--email {
-        width: calc(50% - 20px);
+        width: calc(50% - 15px);
         margin-bottom: 0;
       }
       &.contact__input--subject {
-        width: calc(50% - 20px);
+        width: calc(50% - 15px);
       }
     }
     &__submit {
