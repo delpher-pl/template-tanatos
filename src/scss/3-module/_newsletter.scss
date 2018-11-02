@@ -19,12 +19,30 @@
     align-items: center;
     padding: 0 10px;
   }
-  &__email {
+  &__item {
     flex-grow: 1;
     align-self: stretch;
     margin-right: 0px;
     margin-bottom: 30px;
-
+    position: relative;
+  }
+  &__label {
+    font-size: 0.8em;
+    text-transform: uppercase;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: transform 0.3s, opacity 0.3s;
+  }
+  &__email {
+    width: 100%;
+    &:focus {
+      &+label {
+        transform: translateY(-120%);
+        opacity: 1;
+      }
+    }
   }
 }
 
@@ -34,7 +52,7 @@
       flex-direction: row;
       padding: 0 80px;
     }
-    &__email {
+    &__item {
       margin-right: 30px;
       margin-bottom: 0px;
     }
