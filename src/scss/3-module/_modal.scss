@@ -32,7 +32,7 @@
   }
   &__wrapper {
     position: relative;
-    width: 80%;
+    width: 95%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 50vh;
@@ -41,20 +41,19 @@
   }
   &__window {
     background-color: $white;
-    padding: 25px 50px 30px 50px;
+    padding: 20px 20px 10px 20px;
   }
   &__subheader {
     color: $color2;
     text-align: center;
-    line-height: 1.875em;
-    width: 85%;
-    margin: -12px auto 40px auto;
+    line-height: 1.4em;
+    width: 90%;
+    margin: -12px auto 25px auto;
   }
   &__close {
     position: absolute;
-    top: 0px;
-    right: 0px;
-    transform: translate(50%, -50%);
+    top: 10px;
+    right: 10px;
     color: #fff;
     background-color: $color2;
     border-radius: 50%;
@@ -79,7 +78,7 @@
     align-items: stretch;
     align-content: stretch;
     > * {
-      margin-bottom: 30px;
+      margin-bottom: 10px;
     }
   }
   &__item {
@@ -87,7 +86,11 @@
     width: 100%;
   }
   &__label {
-    color: $color2;
+    position: relative;
+    color: $white;
+    background-color: $color2;
+    padding: 3px 5px;
+    border-radius: 5px;
     font-size: 0.8em;
     text-transform: uppercase;
     position: absolute;
@@ -95,6 +98,20 @@
     left: 0;
     opacity: 0;
     transition: transform 0.3s, opacity 0.3s;
+    &::after {
+      content: '';
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      background-color: $color2;
+      left: 0;
+      right: 0;
+      bottom: -4px;
+      margin: 0 auto;
+      z-index: -1;
+      transform: rotate(45deg);
+
+    }
   }
   &__input {
     border: 1px solid #c4c6c9;
@@ -102,7 +119,7 @@
     &:focus {
       box-shadow: none;
       &+label {
-        transform: translateY(-50%);
+        transform: translateY(-80%);
         opacity: 1;
       }
     }
@@ -116,9 +133,59 @@
     &--message {
       width: 100%;
       resize: vertical;
+      height: 100px;
     }
   }
   &__submit {
     width: 100%;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .modal {
+    &__window {
+      padding: 25px 50px 30px 50px;
+    }
+    &__subheader {
+      line-height: 1.875em;
+      width: 85%;
+      margin: -12px auto 40px auto;
+    }
+    &__form {
+      > * {
+        margin-bottom: 30px;
+      }
+    }
+    &__label {
+      color: $color2;
+      background-color: transparent;
+      padding: 0;
+      &::after {
+        display: none;
+      }
+    }
+    &__input {
+      &--message {
+        height: unset;
+      }
+      &:focus {
+        &+label {
+          transform: translateY(-50%);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .modal {
+    &__wrapper {
+      width: 80%;
+    }
+    &__close {
+      top: 0px;
+      right: 0px;
+      transform: translate(50%, -50%);
+    }
   }
 }
