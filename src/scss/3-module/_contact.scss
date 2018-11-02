@@ -44,16 +44,34 @@
       align-items: center;
     }
   }
-  &__input {
-    &.contact__input--email {
+  &__item {
+    position: relative;
+    width: 100%;
+    &.contact__item--message {
       width: 100%;
+    }
+  }
+  &__label {
+    font-size: 0.8em;
+    text-transform: uppercase;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: transform 0.3s, opacity 0.3s;
+  }
+  &__input {
+    width: 100%;
+    &:focus {
+      &+label {
+        transform: translateY(-120%);
+        opacity: 1;
+      }
+    }
+    &.contact__input--email {
       margin-bottom: 30px;
     }
-    &.contact__input--subject {
-      width: 100%;
-    }
     &.contact__input--message {
-      width: 100%;
       resize: vertical;
     }
   }
@@ -108,13 +126,12 @@
         flex-direction: row;
       }
     }
+    &__item {
+      width: calc(50% - 15px);
+    }
     &__input {
       &.contact__input--email {
-        width: calc(50% - 15px);
         margin-bottom: 0;
-      }
-      &.contact__input--subject {
-        width: calc(50% - 15px);
       }
     }
     &__submit {
