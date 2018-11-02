@@ -204,7 +204,10 @@
       <div class="l-content">
         <h2 class="screenreader">Newsletter</h2>
         <form action="#dontscroll" method="post" class="newsletter__form">
-          <input type="email" name="newsletter-email" id="newsletter-email" placeholder="Enter Your email adress for newsletter" class="newsletter__email" pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?" title="Please enter valid email address to subscribe to our newsletter." required>
+          <div class="newsletter__item">
+            <input type="email" name="newsletter-email" id="newsletter-email" placeholder="Enter Your email adress for newsletter" class="newsletter__email" pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?" title="Please enter valid email address to subscribe to our newsletter." required>
+            <label for="newsletter-email" class="newsletter__label">Your Email Address</label>
+          </div>
           <input type="submit" value="Subscribe" class="btn btn--resetForm" id="newsletter-submit">
         </form>
       </div>
