@@ -112,10 +112,23 @@
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum pariatur libero assumenda
           </p>
           <form action="/" class="modal__form">
+
+            <div class="modal__item">
               <input type="email" name="modal-email" id="modal-email" placeholder="Your Email" class="modal__input modal__input--email" pattern="^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$" title="Please enter valid email address." required>
+              <label for="modal-email" class="modal__label">Your Email Address</label>
+            </div>
+
+            <div class="modal__item">
               <input type="text" name="modal-subject" id="modal-subject" placeholder="Subject" class="modal__input modal__input--subject" pattern="[\w\W]*\w[\w\W]*" title="Please enter subject of message" required>
+              <label for="modal-subject" class="modal__label">Subject</label>
+            </div>
+
+            <div class="modal__item">
               <textarea name="modal-message" id="modal-message" cols="30" rows="9" class="modal__input modal__input--message" placeholder="Your Message" title="Please enter your message" required></textarea>
-              <input type="submit" value="Send Message" class="btn btn--resetForm modal__submit" id="modal-submit">
+              <label for="modal-message" class="modal__label">Your Message</label>
+            </div>
+
+            <input type="submit" value="Send Message" class="btn btn--resetForm modal__submit" id="modal-submit">
           </form>
         </div>
       </div>
