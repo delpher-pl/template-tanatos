@@ -49,6 +49,9 @@ const path = {
       fonts: './src/fonts/**/*.*',
       icons: './src/icons/**/*.*',
       images: './src/img/**/*.*',
+      faviconsPng: './src/*.png',
+      faviconsIco: './src/*.ico',
+      rootXml: './src/*.xml',
     },
     staticDir: {
       fonts: './src/fonts/',
