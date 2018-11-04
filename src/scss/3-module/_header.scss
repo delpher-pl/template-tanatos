@@ -9,8 +9,22 @@
     url('/img/header_bg_full.jpg');
   background-size: cover;
   color: #ffffff;
-
 }
+
+
+.page__menu {
+  &--showing {
+    ~.page__content > .page__header .header__menu {
+      opacity: 0;
+    }
+  }
+  &--show {
+    ~.page__content > .page__header .header__menu {
+      opacity: 0;
+    }
+  }
+}
+
 
 .header {
   &__nav {
@@ -25,11 +39,25 @@
 
   }
   &__menu {
-    display: block;
+    height: 20px;
+    opacity: 1;
+    transition: opacity 0.5s ease, color 0.2s;
+    display: flex;
+    justify-content: center;
     color: white;
-    > i {
-      margin-left: 10px;
+    &:hover {
+      .header__menu-icon {
+        fill: $color1;
+      }
     }
+  }
+  &__menu-icon {
+    fill: $white;
+    width: 26px;
+    height: 20px;
+    margin-left: 13px;
+    transition: fill 0.2s;
+    pointer-events: none;
   }
   &__text {
     padding: 1px;
