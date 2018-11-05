@@ -28,9 +28,9 @@ const uglify = require('gulp-uglify');
 const path = {
   lib: {
     fonts: [
-      {
-        from: './node_modules/@fortawesome/fontawesome-free/webfonts/**/*.*',
-      },
+      // {
+      //   from: './node_modules/@fortawesome/fontawesome-free/webfonts/**/*.*',
+      // },
     ],
     icons: [],
     images: [],
