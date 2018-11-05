@@ -67,10 +67,16 @@
     }
   }
   &__close-icon {
-    width: 100%;
-    text-align: center;
-    margin: 0 auto;
-    font-size: 1em;
+    width: 12px;
+    height: 12px;
+    margin: 13px;
+    stroke: $white;
+    fill: none;
+    stroke-width: 3.0;
+    stroke-linecap: round;
+    stroke-miterlimit: 10;
+    transition: stroke 0.2s, transform 0.2s;
+    pointer-events: none;
   }
   &__form {
     display: flex;
