@@ -40,7 +40,7 @@ h1,h2,h3,h4,h5,h6,
 
 h1, .h1 {
   font-weight: 800;
-  font-size: 3.5em;
+  font-size: 3em;
   text-transform: uppercase;
   line-height: 1;
 }
@@ -55,7 +55,6 @@ h2, .h2 {
 }
 
 h3, .h3 {
-  // color: $white;
   font-weight: 600;
   font-size: 1.5em;
   margin: 0.4em 0;
@@ -66,7 +65,7 @@ h3, .h3 {
 
 @media screen and (min-width: 768px) {
   h1, .h1 {
-    font-size: 4em;
+    font-size: 3.7em;
   }
   h2, .h2 {
     font-size: 2em;
