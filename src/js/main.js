@@ -1,3 +1,4 @@
+require('@babel/polyfill');
 require('./modal.js');
 require('./menu.js');
 require('./header.js');
