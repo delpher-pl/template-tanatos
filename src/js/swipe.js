@@ -4,10 +4,12 @@ class Swipe {
   constructor(optionsObj) {
     this.detectEl = optionsObj.detectEl;
     this.moveEl = optionsObj.moveEl;
-    this.thresholdPx = optionsObj.thresholdPx || 20;
+    this.thresholdX = optionsObj.thresholdX || 50;
+    this.thresholdY = optionsObj.thresholdY || 180;
     this.thresholdTime = optionsObj.thresholdTime || 1000;
     this.activeSwipe = null;
-    this.lastPos = null;
+    this.lastPosX = null;
+    this.lastPosY = null;
     this.isSwiping = false;
   }
 
@@ -44,18 +46,22 @@ class Swipe {
     this.isSwiping = true;
     this.activeSwipe = {
       beginX: ev.clientX || ev.touches[0].clientX,
+      beginY: ev.clientY || ev.touches[0].clientY,
     };
   }
 
   move(ev) {
     const endX = ev.touches[0].clientX;
-    this.lastPos = endX;
+    const endY = ev.touches[0].clientY;
+    this.lastPosX = endX;
+    this.lastPosY = endY;
   }
 
   end(ev) {
     this.isSwiping = false;
     this.activeSwipe = Object.assign(this.activeSwipe, {
-      endX: ev.clientX || this.lastPos,
+      endX: ev.clientX || this.lastPosX,
+      endY: ev.clientY || this.lastPosY,
     });
     this.lastPos = null;
     this.resolve();
@@ -63,9 +69,10 @@ class Swipe {
 
   resolve() {
     const diffX = this.activeSwipe.beginX - this.activeSwipe.endX;
+    const diffY = this.activeSwipe.beginY - this.activeSwipe.endY;
     this.activeSwipe = null;
 
-    if (Math.abs(diffX) < this.thresholdPx) {
+    if (Math.abs(diffX) < this.thresholdX || Math.abs(diffY) > this.thresholdY) {
       return;
     }
 
