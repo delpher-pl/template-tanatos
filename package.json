@@ -16,6 +16,7 @@
   "devDependencies": {
     "@babel/core": "^7.1.5",
     "@babel/preset-env": "^7.1.5",
+    "babelify": "^10.0.0",
     "browser-sync": "^2.24.7",
     "browserify": "^16.2.3",
     "del": "^3.0.0",
