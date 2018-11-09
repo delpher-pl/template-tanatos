@@ -10,6 +10,7 @@ const through = require('through2'); // transform the stream
 const browserify = require('browserify');
 const source = require('vinyl-source-stream');
 const buffer = require('vinyl-buffer');
+// const transform = require('vinyl-transform');
 
 // HTML
 const htmlReplace = require('gulp-html-replace');
@@ -21,7 +22,7 @@ const autoprefixer = require('gulp-autoprefixer');
 const cleanCSS = require('gulp-clean-css'); // Minification
 
 // JS
-const babel = require('gulp-babel');
+// const babel = require('gulp-babel');
 const uglify = require('gulp-uglify');
 
 
@@ -160,14 +161,28 @@ gulp.task('sass', (done) => {
 });
 
 gulp.task('js', (done) => {
-  browserify(path.src.jsFileMain).bundle()
-    // .on('error', function(e){console.log("BROWSERIFY: ",e);})
+  browserify(path.src.jsFileMain)
+    .transform('babelify', {
+      presets: [
+        [
+          '@babel/preset-env',
+          {
+            targets: {
+              browsers: ['last 2 versions', 'safari >= 7'],
+            },
+            useBuiltIns: 'usage',
+            // forceAllTransforms: true,
+          },
+        ],
+      ],
+    })
+    .bundle()
+    // .on('error', (e) => { console.log('BROWSERIFY: ', e); })
     .pipe(source('main.js'))
     .pipe(buffer())
-    .pipe(babel({ presets: ['es2015'] }))
-    // .on('error', function(e){console.log("BABEL: ",e);})
+    // .on('error', (e) => { console.log('BABEL: ', e); })
     .pipe(uglify())
-    // .on('error', function(e){console.log("UGLIFY: ",e);})
+    // .on('error', (e) => { console.log('UGLIFY: ', e); })
     .pipe(gulp.dest(path.dist.js));
   done();
 });
