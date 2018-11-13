@@ -6,8 +6,9 @@
       rgba(mix(#3b434c, #000000, 100%),0.9) 0%,
       rgba(mix(#3b434c, #000000, 60%),0.9) 100%
     ),
-    url('/img/header_bg_full.jpg');
+    url('/img/header_bg_960.jpg');
   background-size: cover;
+  background-position: center center;
   color: #ffffff;
 }
 
@@ -90,6 +91,7 @@
 
 }
 
+
 @media screen and (min-width: 768px) {
   .header {
     &__text {
@@ -131,5 +133,27 @@
     &__nav {
       padding: 0px;
     }
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .page__header {
+    background-image: 
+    linear-gradient( 
+      rgba(mix(#3b434c, #000000, 100%),0.9) 0%,
+      rgba(mix(#3b434c, #000000, 60%),0.9) 100%
+    ),
+    url('/img/header_bg_1200.jpg');
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .page__header {
+    background-image: 
+    linear-gradient( 
+      rgba(mix(#3b434c, #000000, 100%),0.9) 0%,
+      rgba(mix(#3b434c, #000000, 60%),0.9) 100%
+    ),
+    url('/img/header_bg_1920.jpg');
   }
 }

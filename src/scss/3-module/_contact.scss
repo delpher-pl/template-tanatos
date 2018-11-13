@@ -7,8 +7,9 @@
       rgba(mix(#3b434c, #000000, 100%),0.9) 0%,
       rgba(mix(#3b434c, #000000, 60%),0.9) 100%
     ),
-    url('/img/header_bg_full.jpg');
+    url('/img/contact_bg_768.jpg');
   background-size: cover;
+  background-position: center center;
   color: #ffffff;
 }
 
@@ -112,6 +113,12 @@
 @media screen and (min-width: 768px) {
   .page__contact {
     padding: 70px 0 100px 0;
+    background-image: 
+    linear-gradient( 
+      rgba(mix(#3b434c, #000000, 100%),0.9) 0%,
+      rgba(mix(#3b434c, #000000, 60%),0.9) 100%
+    ),
+    url('/img/contact_bg_960.jpg');
   }
 
   .contact {
@@ -140,11 +147,30 @@
   }
 }
 
+@media screen and (min-width: 960px) {
+  .page__contact {
+    background-image: 
+    linear-gradient( 
+      rgba(mix(#3b434c, #000000, 100%),0.9) 0%,
+      rgba(mix(#3b434c, #000000, 60%),0.9) 100%
+    ),
+    url('/img/contact_bg_1200.jpg');
+  }
+}
+
 @media screen and (min-width: 1200px) {
+  .page__contact {
+    background-image: 
+    linear-gradient( 
+      rgba(mix(#3b434c, #000000, 100%),0.9) 0%,
+      rgba(mix(#3b434c, #000000, 60%),0.9) 100%
+    ),
+    url('/img/contact_bg_1920.jpg');
+  }
+  
   .contact {
     &__content {
       padding: 0 155px;
     }
   }
 }
-
