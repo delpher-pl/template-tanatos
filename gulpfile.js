@@ -12,6 +12,9 @@ const source = require('vinyl-source-stream');
 const buffer = require('vinyl-buffer');
 // const transform = require('vinyl-transform');
 
+// SVG & IMAGES
+const svgSprite = require('gulp-svg-sprite');
+
 // HTML
 const htmlReplace = require('gulp-html-replace');
 const htmlMin = require('gulp-htmlmin');
@@ -49,6 +52,7 @@ const path = {
     static: {
       fonts: './src/fonts/**/*.*',
       icons: './src/icons/**/*.*',
+      iconsSVG: './src/icons/**/*.svg',
       images: './src/img/**/*.*',
       faviconsPng: './src/*.png',
       faviconsIco: './src/*.ico',
@@ -105,6 +109,15 @@ function copyGroupFiles(obj) {
   Object.keys(obj).forEach((group) => {
     copyFiles(obj[group], group);
   });
+}
+
+// filter function
+function excludeIcons(el) {
+  const excluded = [
+    path.src.static.icons,
+    path.src.static.iconsSVG,
+  ];
+  return excluded.indexOf(el) === -1;
 }
 
 
@@ -188,9 +201,32 @@ gulp.task('js', (done) => {
 });
 
 gulp.task('static', (done) => {
-  gulp.src(Object.values(path.src.static), {
+  gulp.src(Object.values(path.src.static).filter(excludeIcons), {
     base: 'src',
   })
+    .pipe(gulp.dest(path.dist.main));
+  done();
+});
+
+gulp.task('svg', (done) => {
+  const config = {
+    shape: {
+      dest: 'icons',
+      dimension: {
+        precision: 1,
+        attributes: true,
+      },
+    },
+    mode: {
+      symbol: {
+        dest: 'icons',
+        sprite: 'sprite.svg',
+      },
+    },
+  };
+
+  gulp.src(path.src.static.iconsSVG)
+    .pipe(svgSprite(config))
     .pipe(gulp.dest(path.dist.main));
   done();
 });
@@ -227,7 +263,7 @@ gulp.task('watch', (done) => {
 });
 
 
-gulp.task('build', gulp.series('clean', 'importFromNodeModules', 'html', 'sass', 'js', 'static'));
+gulp.task('build', gulp.series('clean', 'importFromNodeModules', 'html', 'sass', 'js', 'static', 'svg'));
 
 gulp.task('run', gulp.series('build', gulp.parallel('serve', 'watch')));
 
