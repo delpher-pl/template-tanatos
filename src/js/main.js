@@ -6,3 +6,4 @@ require('./team.js');
 require('./works.js');
 require('./testimonials.js');
 require('./contact.js');
+require('./svg.js');
