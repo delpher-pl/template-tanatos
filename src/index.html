@@ -48,9 +48,8 @@
   <nav class="page__menu page__menu--hide" id="page-menu">
     <div class="l-content l-pos-rel l-p-1">
       <a class="menu__close" id="menu-close">
-        <svg class="menu__close-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 22 22" enable-background="new 0 0 22 22">
-          <line x1="0" y1="0" x2="22" y2="22"/>
-          <line x1="22" y1="0" x2="0" y2="22"/>
+        <svg class="menu__close-icon">
+          <use xlink:href="icons/sprite.svg#close"></use>
         </svg>
       </a>
       <div class="menu__wrapper">
@@ -119,9 +118,8 @@
     <div class="l-content l-pos-rel l-p-1 pointer-events-none">
       <div class="modal__wrapper">
         <a class="modal__close" id="modal-close">
-          <svg class="modal__close-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 22 22" enable-background="new 0 0 22 22">
-            <line x1="0" y1="0" x2="22" y2="22"/>
-            <line x1="22" y1="0" x2="0" y2="22"/>
+          <svg class="modal__close-icon">
+            <use xlink:href="icons/sprite.svg#close"></use>
           </svg>
         </a>
         <div class="modal__window">
@@ -163,10 +161,8 @@
           </a>
           <a href="#dontscroll" class="header__menu" id="header-menu">
             Menu
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" class="header__menu-icon" viewBox="0 0 26 20" enable-background="new 0 0 26 20">
-              <rect width="26" height="2"/>
-              <rect y="9" width="26" height="2"/>
-              <rect y="18" width="26" height="2"/>
+            <svg class="header__menu-icon">
+              <use xlink:href="icons/sprite.svg#menu"></use>
             </svg>
           </a>
         </div>
@@ -182,7 +178,9 @@
         </div>
   
         <div class="header__show-more">
-          <img src="/icons/arrowdown.svg" alt="" class="header__show-more-icon">
+          <svg class="header__show-more-icon">
+            <use xlink:href="icons/sprite.svg#arrowdown"></use>
+          </svg>
         </div>
       </div>
     </header>
