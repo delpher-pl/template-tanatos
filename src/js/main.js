@@ -1,5 +1,6 @@
 require('./modal.js');
 require('./menu.js');
+require('./gallery.js');
 require('./header.js');
 require('./newsletter.js');
 require('./team.js');
