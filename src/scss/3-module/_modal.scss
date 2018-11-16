@@ -11,14 +11,14 @@
   z-index: 100;
 
   &--showing {
-    animation: showing-menu 0.5s ease forwards;
+    animation: showing 0.5s ease forwards;
     display: block;
   }
   &--show {
     display: block;
   }
   &--hiding {
-    animation: hiding-menu 0.5s ease-in forwards;
+    animation: hiding 0.5s ease-in forwards;
     display: block;
   }
   &--hide {
