@@ -176,6 +176,7 @@ gulp.task('sass', (done) => {
 gulp.task('js', (done) => {
   browserify(path.src.jsFileMain)
     .transform('babelify', {
+      sourceMaps: true,
       presets: [
         [
           '@babel/preset-env',
@@ -194,8 +195,10 @@ gulp.task('js', (done) => {
     .pipe(source('main.js'))
     .pipe(buffer())
     // .on('error', (e) => { console.log('BABEL: ', e); })
+    .pipe(sourcemaps.init({ loadMaps: true }))
     .pipe(uglify())
     // .on('error', (e) => { console.log('UGLIFY: ', e); })
+    .pipe(sourcemaps.write('maps'))
     .pipe(gulp.dest(path.dist.js));
   done();
 });
@@ -210,13 +213,6 @@ gulp.task('static', (done) => {
 
 gulp.task('svg', (done) => {
   const config = {
-    shape: {
-      dest: 'icons',
-      dimension: {
-        precision: 1,
-        attributes: true,
-      },
-    },
     mode: {
       symbol: {
         dest: 'icons',
