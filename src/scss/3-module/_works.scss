@@ -55,7 +55,9 @@
     }
     &.works__item--hide {
       opacity: 0;
-      max-height: 0;
+      // max-height must be more than 0px to prevent removing element from DOM tree on mobiles
+      // to reach title value by using javascript
+      max-height: 0.1px;
       margin-bottom: 0;
     }
   }
@@ -169,6 +171,9 @@
     &__item {
       width: calc(33% - 20px);      
     }
+    &__title {
+      font-size: 1.4em;
+    }
     &__description {
       margin-bottom: 40px;
     }
@@ -180,6 +185,9 @@
     &__item {
       height: 350px;
       max-height: 350px;
+    }
+    &__title {
+      font-size: 1.5em;
     }
   }
 }
