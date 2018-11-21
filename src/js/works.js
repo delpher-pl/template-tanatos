@@ -1,6 +1,20 @@
+const { Gallery } = require('./gallery.js');
+
+const worksSection = document.querySelector('#page-works');
+const galleryEl = document.querySelector('#page-gallery');
+
 const showMoreBtn = document.querySelector('#works-show-more');
 const hiddenItemsEl = document.querySelectorAll('.works__item--hide');
 const showMoreContainerEl = document.querySelector('.works__more');
+
+
+const worksGallery = new Gallery({
+  thumbnailsEl: worksSection,
+  galleryEl,
+  thumbnailsName: 'works',
+});
+worksGallery.init();
+
 
 function showItem(el) {
   el.classList.remove('works__item--hide');
@@ -20,6 +34,7 @@ function hideButton() {
 function showHiddenItems() {
   Array.prototype.forEach.call(hiddenItemsEl, el => showItem(el));
 }
+
 
 showMoreBtn.addEventListener('touchend', (ev) => {
   ev.stopPropagation();
