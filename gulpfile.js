@@ -28,6 +28,13 @@ const cleanCSS = require('gulp-clean-css'); // Minification
 // const babel = require('gulp-babel');
 const uglify = require('gulp-uglify');
 
+const SUPPORTED_BROWSERS = [
+  'last 3 versions',
+  'Firefox > 30',
+  'Chrome > 30',
+  'Opera > 30',
+];
+
 
 const path = {
   lib: {
@@ -160,12 +167,7 @@ gulp.task('sass', (done) => {
     .pipe(sourcemaps.init())
     .pipe(sass())
     .pipe(autoprefixer({
-      browsers: [
-        'last 3 versions',
-        'Firefox > 30',
-        'Chrome > 30',
-        'Opera > 30',
-      ],
+      browsers: SUPPORTED_BROWSERS,
     }))
     .pipe(cleanCSS())
     .pipe(sourcemaps.write('maps'))
@@ -182,7 +184,7 @@ gulp.task('js', (done) => {
           '@babel/preset-env',
           {
             targets: {
-              browsers: ['last 2 versions', 'safari >= 7'],
+              browsers: SUPPORTED_BROWSERS,
             },
             useBuiltIns: 'usage',
             // forceAllTransforms: true,
