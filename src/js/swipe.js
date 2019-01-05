@@ -59,6 +59,11 @@ class Swipe {
 
   end(ev) {
     this.isSwiping = false;
+
+    if (!this.activeSwipe) {
+      return;
+    }
+
     this.activeSwipe = Object.assign(this.activeSwipe, {
       endX: ev.clientX || this.lastPosX,
       endY: ev.clientY || this.lastPosY,
