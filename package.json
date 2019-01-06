@@ -12,7 +12,8 @@
   "dependencies": {
     "@babel/polyfill": "^7.0.0",
     "normalize-scss": "^7.0.1",
-    "svg4everybody": "^2.1.9"
+    "svg4everybody": "^2.1.9",
+    "vanilla-lazyload": "^8.17.0"
   },
   "devDependencies": {
     "@babel/core": "^7.1.5",
