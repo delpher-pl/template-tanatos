@@ -1,3 +1,4 @@
+require('./lazyload.js');
 require('./modal.js');
 require('./menu.js');
 require('./gallery.js');
