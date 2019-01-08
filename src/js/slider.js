@@ -3,6 +3,18 @@
 // sliderEl argument must have data-currentslide attribute!
 //
 
+// IE polyfill
+function createNewEvent(eventName) {
+  let event;
+  if (typeof (Event) === 'function') {
+    event = new Event(eventName);
+  } else {
+    event = document.createEvent('Event');
+    event.initEvent(eventName, true, true);
+  }
+  return event;
+}
+
 
 function getCurrentSlide(sliderEl) {
   const slidesCount = sliderEl.children.length;
@@ -20,7 +32,7 @@ function showslide(pageNumber, sliderEl, isDispatchingEv = false) {
   );
 
   if (isDispatchingEv) {
-    SLIDER_EL.dispatchEvent(new Event('changeSlide'));
+    SLIDER_EL.dispatchEvent(createNewEvent('changeSlide'));
   }
 }
 
@@ -40,7 +52,7 @@ function moveSlide(moveSteps, sliderEl, isDispatchingEv = false) {
     `transform:translateX(-${(100 * currentSlide) % (slidesCount * 100)}%)`,
   );
   if (isDispatchingEv) {
-    SLIDER_EL.dispatchEvent(new Event('changeSlide'));
+    SLIDER_EL.dispatchEvent(createNewEvent('changeSlide'));
   }
 }
 
