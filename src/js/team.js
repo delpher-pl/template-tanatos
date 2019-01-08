@@ -1,5 +1,6 @@
 const { showslide, getCurrentSlide } = require('./slider.js');
 const { Swipe } = require('./swipe.js');
+const { lazyUpdTimeout } = require('./lazyload.js');
 
 const teamSection = document.querySelector('.page__team');
 const teamSlider = document.querySelector('.team__slider');
@@ -19,6 +20,7 @@ teamPagination.addEventListener('change', (ev) => {
   selectedSlide = ev.target.value;
 
   showslide(selectedSlide, teamSlider);
+  lazyUpdTimeout();
 }, false);
 
 
