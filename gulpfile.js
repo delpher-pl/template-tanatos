@@ -3,6 +3,7 @@ const browserSync = require('browser-sync').create();
 const tildeImporter = require('node-sass-tilde-importer');
 const del = require('del');
 const sourcemaps = require('gulp-sourcemaps');
+const ghpages = require('gh-pages');
 // const concat = require('gulp-concat');
 const lec = require('gulp-line-ending-corrector');
 const isBinary = require('gulp-is-binary');
@@ -229,6 +230,17 @@ gulp.task('svg', (done) => {
   done();
 });
 
+
+gulp.task('ghpages', (done) => {
+  ghpages.publish('dist', {
+    message: 'UPD GH-PAGES - Auto-generated commit',
+  },
+  (err) => {
+    // eslint-disable-next-line no-console
+    console.log(err);
+  });
+  done();
+});
 
 gulp.task('serve', (done) => {
   browserSync.init({
