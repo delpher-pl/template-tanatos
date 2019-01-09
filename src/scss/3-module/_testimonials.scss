@@ -7,7 +7,7 @@
       rgba(mix(#3b434c, #000000, 100%),0.9) 0%,
       rgba(mix(#3b434c, #000000, 60%),0.9) 100%
     ),
-    url('/img/testimonials_bg_768.jpg');
+    url('./img/testimonials_bg_768.jpg');
   background-size: cover;
   background-position: center center;
   color: #ffffff;
@@ -144,7 +144,7 @@
       rgba(mix(#3b434c, #000000, 100%),0.9) 0%,
       rgba(mix(#3b434c, #000000, 60%),0.9) 100%
     ),
-    url('/img/testimonials_bg_1200.jpg');
+    url('./img/testimonials_bg_1200.jpg');
   }
 }
 
@@ -155,6 +155,6 @@
       rgba(mix(#3b434c, #000000, 100%),0.9) 0%,
       rgba(mix(#3b434c, #000000, 60%),0.9) 100%
     ),
-    url('/img/testimonials_bg_1920.jpg');
+    url('./img/testimonials_bg_1920.jpg');
   }
 }
