@@ -16,7 +16,7 @@
     "vanilla-lazyload": "^8.17.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.1.5",
+    "@babel/core": "^7.4.3",
     "@babel/preset-env": "^7.4.3",
     "babelify": "^10.0.0",
     "browser-sync": "^2.24.7",
