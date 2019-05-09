@@ -22,7 +22,7 @@
     "browser-sync": "^2.24.7",
     "browserify": "^16.2.3",
     "del": "^3.0.0",
-    "eslint": "^4.19.1",
+    "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^13.0.0",
     "eslint-plugin-import": "^2.13.0",
     "gh-pages": "^2.0.1",
